@@ -1,0 +1,2 @@
+172.20.0.1 - - [26/Feb/2019:12:23:50 +0000] "GET /02/ HTTP/1.1" 403 555 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36"
+172.20.0.1 - - [26/Feb/2019:12:24:07 +0000] "GET /02/variable.php HTTP/1.1" 200 158 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36"
