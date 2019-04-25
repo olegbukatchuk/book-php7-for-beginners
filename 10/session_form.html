@@ -1,9 +1,21 @@
-<form name="entry" method="POST" action="session_set.php">
-  <fieldset>
-    <legend>В качестве имени: только буквы</legend>
-    Имя: <input type="text" name="user">
-    Пароль: <input type="password" name="pass">
-    <p>В качестве пароля: только символы A-Z a-z 0-9 . _ (не менее 8 символов)</p>
-    <input type="submit" value="Авторизоваться">
-  </fieldset>
-</form>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title><?php echo $page_title; ?></title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+
+  <form name="entry" method="POST" action="session_set.php">
+    <fieldset>
+      <legend>В качестве имени: только буквы</legend>
+      Имя: <input type="text" name="user">
+      Пароль: <input type="password" name="pass">
+      <p>В качестве пароля: только символы A-Z a-z 0-9 . _ (не менее 8 символов)</p>
+      <input type="submit" value="Авторизоваться">
+    </fieldset>
+  </form>
+
+</body>
+</html>

@@ -1,19 +1,24 @@
 version: '3'
+
 services:
 
-  phpfpm:
+  php:
+    hostname: php
+    container_name: php
     image: 10up/phpfpm
     volumes:
       - "./:/var/www/html"
-      - "./config/php-fpm/php.ini:/usr/local/etc/php/php.ini"
-      - "./config/php-fpm/docker-php-ext-xdebug.ini:/usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini"
+      - "./config/php/php.ini:/usr/local/etc/php/php.ini"
+      - "./config/php/docker-php-ext-xdebug.ini:/usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini"
     restart: always
     extra_hosts:
       - "localhost:172.18.0.1"
 
   nginx:
+    hostname: nginx
+    container_name: nginx
     depends_on:
-      - phpfpm
+      - php
     ports:
       - "80:80"
     image: nginx:latest
@@ -22,3 +27,14 @@ services:
       - "./config/nginx/default.conf:/etc/nginx/conf.d/default.conf"
       - "./config/certs:/etc/nginx/certs"
     restart: always
+
+  db:
+    hostname: db
+    container_name: db
+    image: registry.bukatchuk.com/web/freelance.im/core:db_dev
+    restart: always
+    environment:
+      - "MYSQL_RANDOM_ROOT_PASSWORD=yes"
+      - "MYSQL_USER=db_user"
+      - "MYSQL_PASSWORD=db_password"
+      - "MYSQL_DATABASE=db_name"

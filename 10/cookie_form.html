@@ -1,8 +1,20 @@
-<form name="entry" method="POST" action="cookie_set.php">
-  <fieldset>
-    <legend>Вводте только буквы и цифры</legend>
-    Имя: <input type="text" name="user">
-    Пароль: <input type="password" name="pass">
-    <br><br><input type="submit" value="Авторизоваться">
-  </fieldset>
-</form>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title><?php echo $page_title; ?></title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+
+  <form name="entry" method="POST" action="cookie_set.php">
+    <fieldset>
+      <legend>Вводте только буквы и цифры</legend>
+      Имя: <input type="text" name="user">
+      Пароль: <input type="password" name="pass">
+      <br><br><input type="submit" value="Авторизоваться">
+    </fieldset>
+  </form>
+
+</body>
+</html>
