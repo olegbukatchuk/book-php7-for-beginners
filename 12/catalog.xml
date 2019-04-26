@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8">
+<catalog>
+  <book>
+    <title cover="../images/img.png">C</title>
+    <category>Компилиируемые</category>
+  </book>
+  <book>
+    <title cover="../images/img.png">C</title>
+    <category>Компилиируемые</category>
+  </book>
+  <book>
+    <title cover="../images/im.png">C</title>
+    <category>Компилиируемые</category>
+  </book>
+  <book>
+    <title cover="../images/img.png">C</title>
+    <category>Компилиируемые</category>
+  </book>
+  <book>
+    <title cover="../images/img.png">C</title>
+    <category>Прочие</category>
+  </book>
+</catalog>
